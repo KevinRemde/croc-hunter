@@ -1,22 +1,22 @@
 FROM golang:1.7-alpine
 
-MAINTAINER Lachlan Evenson <lachlan.evenson@gmail.com>
+MAINTAINER Kevin Remde <kevrem@microsoft.com>
 
 ARG VCS_REF
 ARG BUILD_DATE
 
 # Metadata
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/kevinremde/crochunter" \
+      org.label-schema.vcs-url="https://github.com/kevinremde/croc-hunter" \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.docker.dockerfile="/Dockerfile"
 
-COPY . /go/src/github.com/kevinremde/crochunter
+COPY . /go/src/github.com/kevinremde/croc-hunter
 COPY static/ static/
 
 ENV GIT_SHA $VCS_REF
 ENV GOPATH /go
-RUN cd $GOPATH/src/github.com/kevinremde/crochunter && go install -v .
+RUN cd $GOPATH/src/github.com/kevinremde/croc-hunter && go install -v .
 
 CMD ["croc-hunter"]
 

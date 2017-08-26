@@ -39,6 +39,14 @@ chmod 700 get_helm.sh
 helm init
 helm repo update
 
+# Install Kube Lego chart
+helm install stable/kube-lego --set config.LEGO_EMAIL=kevin@remde.net,config.LEGO_URL=https://acme-v01.api.letsencrypt.org/directory
+
+# Install Nginx ingress chart
+helm install stable/nginx-ingress
+# Follow the notes from helm status to determine the external IP 
+# of the nginx-ingress service
+
 # Install Jenkins into the cluster
 helm --namespace jenkins --name jenkins -f ./jenkins-values.yaml install stable/jenkins
 
