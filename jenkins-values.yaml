@@ -27,9 +27,9 @@ Master:
       kubernetes.io/tls-acme: "true"
 
     TLS:
-      - secretName: jenk.remde.net
+      - secretName: croc.remde.net
         hosts:
-          - jenk.remde.net
+          - croc.remde.net
 
 Agent:
   Enabled: false
