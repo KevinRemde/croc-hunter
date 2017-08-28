@@ -5,15 +5,15 @@
     "cpu": "10m",
     "memory": "128Mi",
     "test": true,
-    "hostname": "croc-hunter.remde.net"
+    "hostname": "crocd.remde.net"
   },
   "container_repo": {
     "host": "karcontainers-microsoft.azurecr.io",
-    "master_acct": "lachie83",
-    "alt_acct": "lachie83",
+    "master_acct": "karcontainers",
+    "alt_acct": "karcontainers",
     "jenkins_creds_id": "quay_creds",
     "repo": "croc-hunter",
-    "dockeremail": ".",
+    "dockeremail": "kevin@remde.net",
     "dockerfile": "./"
   },
   "pipeline": {
