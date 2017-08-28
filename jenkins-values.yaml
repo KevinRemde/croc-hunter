@@ -4,7 +4,7 @@
 
 Master:
   Memory: "512Mi"
-  HostName: croc.remde.net
+  HostName: jenk.remde.net
   ServiceType: ClusterIP
   InstallPlugins:
       - kubernetes:0.11 
