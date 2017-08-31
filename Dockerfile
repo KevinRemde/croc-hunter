@@ -20,5 +20,5 @@ RUN cd $GOPATH/src/github.com/kevinremde/croc-hunter && go install -v .
 
 CMD ["croc-hunter"]
 
-EXPOSE 8080
+EXPOSE 80
 	
