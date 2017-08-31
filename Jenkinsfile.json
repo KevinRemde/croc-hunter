@@ -8,17 +8,17 @@
     "hostname": "croc.remde.net"
   },
   "container_repo": {
-    "host": "karcontainers-microsoft.azurecr.io",
-    "master_acct": "karcontainers",
-    "alt_acct": "karcontainers",
-    "jenkins_creds_id": "quay_creds",
+    "host": "hub.docker.com",
+    "master_acct": "kevinremde",
+    "alt_acct": "kevinremde",
+    "jenkins_creds_id": "hub_creds",
     "repo": "croc-hunter",
     "dockeremail": "kevin@remde.net",
     "dockerfile": "./"
   },
   "pipeline": {
       "enabled": true,
-      "debug": false,
+      "debug": true,
       "library": {
         "branch": "master"
       }
