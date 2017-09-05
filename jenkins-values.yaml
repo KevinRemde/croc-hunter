@@ -7,13 +7,13 @@ Master:
   HostName: jenk.remde.net
   ServiceType: ClusterIP
   InstallPlugins:
-      - kubernetes:0.11 
+      - kubernetes:0.12 
       - workflow-aggregator:2.5
-      - credentials-binding:1.12
-      - git:3.3.1
+      - credentials-binding:1.13
+      - git:3.5.1
       - pipeline-github-lib:1.0
       - ghprb:1.39.0
-      - blueocean:1.1.4
+      - blueocean:1.2.0
 
   ScriptApproval:
     - "method groovy.json.JsonSlurperClassic parseText java.lang.String"
@@ -27,9 +27,9 @@ Master:
       kubernetes.io/tls-acme: "true"
 
     TLS:
-      - secretName: croc.remde.net
+      - secretName: jenk.remde.net
         hosts:
-          - croc.remde.net
+          - jenk.remde.net
 
 Agent:
   Enabled: false
